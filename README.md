@@ -1,38 +1,41 @@
-# VisaPath
+# visapath
 
-> AI-Powered Immigration & Visa Navigation
+**AI-powered immigration and visa navigation platform**
 
-## Overview
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-VisaPath simplifies the complex world of immigration by using AI to guide users through visa applications, eligibility checks, document preparation, and timeline planning. Built for immigrants, attorneys, and HR teams managing global talent mobility.
-
-## Key Features
-
-- **Visa Eligibility Engine** — Instantly check eligibility across 50+ visa categories
-- **Document Checklist** — AI-generated personalized document requirements
-- **Timeline Planner** — Realistic processing time estimates and milestone tracking
-- **Form Auto-Fill** — Pre-populate immigration forms from user profiles
-- **Status Tracking** — Real-time application status monitoring
-- **Attorney Dashboard** — Case management for immigration lawyers
-- **Multi-Country** — Support for US, Canada, UK, Australia, and EU immigration
-
-## Tech Stack
-
-- **Frontend:** Next.js, TypeScript, Tailwind CSS
-- **Backend:** Node.js, Express
-- **AI:** Claude API for document analysis and guidance
-- **Database:** PostgreSQL, Prisma
-- **Deployment:** Vercel, GCP
-
-## Getting Started
-
+## Install
 ```bash
-git clone https://github.com/MukundaKatta/visapath.git
-cd visapath
 npm install
-npm run dev
 ```
 
----
+## Quick Start
+```typescript
+import { Visapath } from "./visapath";
+const instance = new Visapath()
+const r = await instance.process({ input: 'test' })
+```
 
-**Mukunda Katta** · [Officethree Technologies](https://github.com/MukundaKatta/Office3) · 2026
+## CLI
+```bash
+npx tsx src/cli.ts status
+npx tsx src/cli.ts run --input "data"
+```
+
+## API
+| Method | Description |
+|--------|-------------|
+| `process()` | Process |
+| `analyze()` | Analyze |
+| `transform()` | Transform |
+| `validate()` | Validate |
+| `export()` | Export |
+| `get_stats()` | Get stats |
+
+## Test
+```bash
+npx vitest
+```
+
+## License
+(c) 2026 Officethree Technologies. All Rights Reserved.
